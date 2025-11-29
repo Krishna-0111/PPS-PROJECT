@@ -70,7 +70,7 @@ void addDonation () {
 
    Donation d;
    printf("Enter a iteam type: ");
-   scanf("%[^\n]",d.iteamtypye);
+   scanf(" %[^\n]", d.itemType);
    printf("Enter a quantity: ");
    scanf("%d",&d.quantity);
    printf("Enter a expiry date (YYYY-MM-DD): ");
