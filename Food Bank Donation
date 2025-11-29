@@ -113,8 +113,8 @@ for (int i = 0; i < requestcount; i++) {
 request r = requests[i];
 printf("Processing request %d (Priority %d)...\n", i + 1, r.priority);
 
-for(int j = 0; j < donationcount; j++) {
-Donation *d = &donations[j];
+for(int j = 0; i < donationcount; j++) {
+Donation *d = &donation[j];
 
 if (d->quantity > 0 && !d->isExpired) {
 int allocated = r.familysize * 2; // simple logic: 2 items per person
