@@ -126,3 +126,6 @@ break;
 }
 }
 }
+
+printf("Distribution complete.\n");
+}
