@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_ITEMS 100
+#define MAX_REQUESTS 100
+
+// Structure for donated items
+typedef struct {
+    char itemType[50];
+    int quantity;
+    char expiryDate[20]; // Format: YYYY-MM-DD
+    char donorName[50];
+    int isPerishable;
+    int isExpired;
+} Donation;
+
+// Structure for recipient requests
+typedef struct {
+    int familySize;
+    char dietaryRestrictions[100];
+    int priority; // 1 = High, 2 = Medium, 3 = Low
+} Request;
+
+// Global arrays
+Donation donations[MAX_ITEMS];
+Request requests[MAX_REQUESTS];
+int donationCount = 0;
+int requestCount = 0;
+
+// Function declarations
+void addDonation();
+void addRequest();
+void distributeFood();
+void showReport();
+int isExpired(char expiryDate[]); // Dummy expiry checker
+
+int main() {
+    int choice;
+
+    while (1) {
+        printf("\n--- Food Bank Management System ---\n");
+        printf("1. Add Donation\n");
+        printf("2. Add Recipient Request\n");
+        printf("3. Distribute Food\n");
+        printf("4. Show Daily Report\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1: addDonation(); break;
+            case 2: addRequest(); break;
+            case 3: distributeFood(); break;
+            case 4: showReport(); break;
+            case 5: printf("Exiting program. Thank you!\n"); exit(0);
+            default: printf("Invalid choice. Try again.\n");
+        }
+    }
+
+    return 0;
+}
