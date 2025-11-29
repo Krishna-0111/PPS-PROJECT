@@ -85,6 +85,24 @@ void addDonation () {
    donations[donationCount++] = d;
    printf("Donation recorded successfully.\n");
 }
-    
+
+// Add Request
+void addRequest() {
+    if (requestCount >= MAX_REQUESTS) {
+        printf("Request storage full.\n");
+        return;
+    }
+
+    Request r;
+    printf("Enter family size: ");
+    scanf("%d", &r.familySize);
+    printf("Enter dietary restrictions: ");
+    scanf(" %[^\n]", r.dietaryRestrictions);
+    printf("Enter priority (1 = High, 2 = Medium, 3 = Low): ");
+    scanf("%d", &r.priority);
+
+    requests[requestCount++] = r;
+    printf("Request recorded successfully.\n");
+}
 
 
