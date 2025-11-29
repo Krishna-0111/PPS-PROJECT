@@ -117,7 +117,7 @@ for (int j = 0; j < donationCount; j++) {
             Donation *d = &donations[j];
 
 if (d->quantity > 0 && !d->isExpired) {
-int allocated = r.familysize * 2; // simple logic: 2 items per person
+int allocated = r.familySize * 2; // Simple logic: 2 items per person
 if (allocated > d->quantity) allocated = d->quantity;
 
 printf("Allocated %d of %s to request %d\n", allocated, d->itemtype, i + 1);
