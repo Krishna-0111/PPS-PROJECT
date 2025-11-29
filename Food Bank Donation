@@ -61,3 +61,13 @@ int main() {
     return 0;
 }
 
+\\Add Donation
+void addDonation () {
+   if (donationCount >= MAX_ITEMS) {
+      printf ("Donation storage full.\n");
+      return; 
+   }
+}
+    
+
+
