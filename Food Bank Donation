@@ -69,16 +69,16 @@ void addDonation () {
    }
 
    Donation d;
-   printf ("Enter a iteam type: ");
-   scanf ("%[^\n]",d.iteamtypye);
-   printf ("Enter a quantity: ");
-   scanf ("%d",&d.quantity);
-   printf ("Enter a expiry date (YYYY-MM-DD): ");
-   scanf (" %[^\n]",d.expirydate);
+   printf("Enter a iteam type: ");
+   scanf("%[^\n]",d.iteamtypye);
+   printf("Enter a quantity: ");
+   scanf("%d",&d.quantity);
+   printf("Enter a expiry date (YYYY-MM-DD): ");
+   scanf(" %[^\n]",d.expirydate);
    printf("Enter a donor name: ");
-   scanf (" %[^\n]", d.donorName);
-   printf ("Is iteam perishable (1=Yes, 0=No): ");
-   scanf ("%d", &d.isPerishable);
+   scanf(" %[^\n]", d.donorName);
+   printf("Is iteam perishable (1=Yes, 0=No): ");
+   scanf("%d", &d.isPerishable);
 
    d.isExpired = isExpired(d.expiryDate);
 
