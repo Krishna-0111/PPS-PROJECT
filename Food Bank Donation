@@ -120,3 +120,9 @@ if (d->quantity > 0 && !d->isExpired) {
 int allocated = r.familysize * 2; // simple logic: 2 items per person
 if (allocated > d->quantity) allocated = d->quantity;
 
+printf("Allocated %d of %s to request %d\n", allocated, d->itemtype, i + 1);
+d->quantity -= allocated;
+break;
+}
+}
+}
