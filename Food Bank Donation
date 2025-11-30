@@ -131,7 +131,7 @@ printf("Distribution complete.\n");
 }
 
 
-void showReport( {
+void showReport() {
     int totalDistributed = 0, totalExpired = 0;
 
 printf("\n--- Daily Report ---\n");
