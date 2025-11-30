@@ -77,8 +77,10 @@ int main()
 }
 
 //Add Donation
-void addDonation () {
-   if (donationCount >= MAX_ITEMS) {
+void addDonation () 
+{
+   if (donationCount >= MAX_ITEMS) 
+   {
       printf ("Donation storage full.\n");
       return; 
    }
@@ -95,15 +97,15 @@ void addDonation () {
    printf("Is item perishable (1=Yes, 0=No): ");
    scanf("%d", &d.isPerishable);
 
-
-
    donations[donationCount++] = d;
    printf("Donation recorded successfully.\n");
 }
 
 // Add Request
-void addRequest() {
-    if (requestCount >= MAX_REQUESTS) {
+void addRequest() 
+{
+    if (requestCount >= MAX_REQUESTS) 
+    {
         printf("Request storage full.\n");
         return;
     }
@@ -112,7 +114,7 @@ void addRequest() {
     printf("Enter family size: ");
     scanf("%d", &r.familySize);
     getchar();
-    printf("Enter dietary restrictions: ");
+    printf("Enter dietary restriction(if any): ");
     fgets(r.dietaryRestrictions,100,stdin);
     printf("Enter priority (1 = High, 2 = Medium, 3 = Low): ");
     scanf("%d", &r.priority);
@@ -145,7 +147,6 @@ break;
 printf("Distribution complete.\n");
 }
 
-
 void showReport() {
     int totalDistributed = 0, totalExpired = 0;
 
@@ -155,7 +156,8 @@ for (int i = 0; i < donationCount; i++){
  Donation d = donations[i];
  if (d.isExpired) {
    totalExpired += d.quantity;
- } else {
+ } 
+ else {
    totalDistributed += d.quantity;
  }
 }
@@ -164,7 +166,8 @@ printf("Remaining item (not yet distributed): %d\n",totalDistributed);
 printf("Waste due to expiry: %d item\n",totalExpired);
 
 printf("\nDonor Acknowledgements:\n");
-for (int i = 0; i < donationCount; i++) {
+for (int i = 0; i < donationCount; i++) 
+{
     printf("- %s donated %s\n", donations[i].donorName, donations[i].itemType);
 }
 return;
