@@ -154,7 +154,7 @@ for (int i = 0; <donationcount; i++) {
 }
 }
 
-\\ Dummy expiry checker (always returns 0 for simplicity)
+// Dummy expiry checker 
 int isExpired(char epiryDate[]) {
 return 0;
 }
