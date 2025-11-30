@@ -80,7 +80,7 @@ void addDonation () {
    printf("Is item perishable (1=Yes, 0=No): ");
    scanf("%d", &d.isPerishable);
 
-   d.isExpired = isExpired(d.expiryDate);
+
 
    donations[donationCount++] = d;
    printf("Donation recorded successfully.\n");
@@ -96,8 +96,9 @@ void addRequest() {
     Request r;
     printf("Enter family size: ");
     scanf("%d", &r.familySize);
+    getchar();
     printf("Enter dietary restrictions: ");
-    scanf(" %[^\n]", r.dietaryRestrictions);
+    fgets(r.dietaryRestrictions,100,stdin);
     printf("Enter priority (1 = High, 2 = Medium, 3 = Low): ");
     scanf("%d", &r.priority);
 
@@ -126,7 +127,6 @@ break;
 }
 }
 }
-
 printf("Distribution complete.\n");
 }
 
@@ -152,10 +152,5 @@ printf("\nDonor Acknowledgements:\n");
 for (int i = 0; i < donationCount; i++) {
     printf("- %s donated %s\n", donations[i].donorName, donations[i].itemType);
 }
-}
-
-// Dummy expiry checker 
-int isExpired(char expiryDate[]) {
-
-return 0;
+return;
 }
