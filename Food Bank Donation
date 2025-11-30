@@ -6,7 +6,8 @@
 #define MAX_REQUESTS 100
 
 // Structure for donated items
-typedef struct {
+typedef struct 
+{
     char itemType[50];
     int quantity;
     char expiryDate[20]; // Format: YYYY-MM-DD
@@ -16,7 +17,8 @@ typedef struct {
 } Donation;
 
 // Structure for recipient requests
-typedef struct {
+typedef struct 
+{
     int familySize;
     char dietaryRestrictions[100];
     int priority; // 1 = High, 2 = Medium, 3 = Low
@@ -35,11 +37,12 @@ void distributeFood();
 void showReport();
 int isExpired(char expiryDate[]); // Dummy expiry checker
 
-int main() {
+int main() 
+{
     int choice;
-
-    while (1) {
-        printf("\n--- Food Bank Management System ---\n");
+    printf("\n\t\t---------- FOOD BANK MANAGEMENT SYSTEM -----------\n");
+    while (1) 
+{
         printf("1. Add Donation\n");
         printf("2. Add Recipient Request\n");
         printf("3. Distribute Food\n");
@@ -48,13 +51,25 @@ int main() {
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
-        switch (choice) {
-            case 1: addDonation(); break;
-            case 2: addRequest(); break;
-            case 3: distributeFood(); break;
-            case 4: showReport(); break;
-            case 5: printf("Exiting program. Thank you!\n"); exit(0);
-            default: printf("Invalid choice. Try again.\n");
+       switch (choice)
+        {
+        case 1:
+            addDonation();
+            break;
+        case 2:
+            addRequest();
+            break;
+        case 3:
+            distributeFood();
+            break;
+        case 4:
+            showReport();
+            break;
+        case 5:
+            printf("Thank You For Making A Difference !!!\n");
+            exit(0);
+        default:
+            printf("Invalid choice. Try again.\n");
         }
     }
 
