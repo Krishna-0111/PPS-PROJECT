@@ -136,8 +136,8 @@ void showReport() {
 
 printf("\n--- Daily Report ---\n");
 
-for (int i = 0; <donationcount; i++){
- Donation d = donation[i];
+for (int i = 0; i <donationcount; i++){
+ Donation d = donations[i];
  if (d.isExpired) {
    totalExpired += d.quantity;
  } else {
