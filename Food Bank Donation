@@ -69,7 +69,7 @@ void addDonation () {
    }
 
    Donation d;
-   printf("Enter a iteam type: ");
+   printf("Enter a item type: ");
    scanf(" %[^\n]", d.itemType);
    printf("Enter a quantity: ");
    scanf("%d",&d.quantity);
