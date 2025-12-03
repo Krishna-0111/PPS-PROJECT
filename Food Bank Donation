@@ -162,13 +162,6 @@ for (int i = 0; i < donationCount; i++){
  }
 }
 
-printf("Remaining item (not yet distributed): %d\n",totalDistributed);
-printf("Waste due to expiry: %d item\n",totalExpired);
 
-printf("\nDonor Acknowledgements:\n");
-for (int i = 0; i < donationCount; i++) 
-{
-    printf("- %s donated %s\n", donations[i].donorName, donations[i].itemType);
-}
 return;
 }
